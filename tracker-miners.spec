@@ -103,7 +103,7 @@ rm -rf %{buildroot}%{_datadir}/tracker-tests
 
 %files -f %{name}.lang
 %license COPYING
-%doc AUTHORS NEWS README
+%doc AUTHORS NEWS README.md
 %{_libdir}/tracker-miners-2.0/
 %{_libexecdir}/tracker*
 %{_datadir}/dbus-1/services/org.freedesktop.Tracker*
