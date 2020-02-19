@@ -16,7 +16,7 @@
 %global systemd_units tracker-extract.service tracker-miner-fs.service tracker-miner-rss.service tracker-writeback.service
 
 Name:		tracker-miners
-Version:	2.3.1
+Version:	2.3.2
 Release:	1
 Summary:	Tracker miners and metadata extractors
 Group:		Graphical desktop/GNOME
@@ -78,10 +78,8 @@ tag/metadata database and search tool.
 
 This package contains various miners and metadata extractors for tracker.
 
-
 %prep
 %autosetup -p1
-
 
 %build
 %meson -Dfunctional_tests=false \
@@ -89,14 +87,12 @@ This package contains various miners and metadata extractors for tracker.
        -Dmp3=true
 %meson_build
 
-
 %install
 %meson_install
 
 rm -rf %{buildroot}%{_datadir}/tracker-tests
 
 %find_lang %{name}
-
 
 %post
 %systemd_user_post %{systemd_units}
