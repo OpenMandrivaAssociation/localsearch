@@ -110,7 +110,7 @@ rm -rf %{buildroot}%{_datadir}/tracker-tests
 %{_datadir}/dbus-1/interfaces/org.freedesktop.Tracker3*
 %{_datadir}/dbus-1/services/org.freedesktop.Tracker*
 %{_datadir}/glib-2.0/schemas/*
-%{_datadir}/tracker/
+#{_datadir}/tracker/
 %{_datadir}/tracker3-miners/
 %{_mandir}/man1/tracker*.1*
 %config(noreplace) %{_sysconfdir}/xdg/autostart/tracker*.desktop
