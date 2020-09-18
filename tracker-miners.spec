@@ -27,7 +27,7 @@ URL:		https://wiki.gnome.org/Projects/Tracker
 Source0:	https://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 
 BuildRequires:       asciidoc
-BuilsRequires:       xsltproc
+BuildRequires:       xsltproc
 BuildRequires:	meson
 BuildRequires:	giflib-devel
 BuildRequires:	intltool
