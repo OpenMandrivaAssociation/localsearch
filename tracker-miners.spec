@@ -34,6 +34,7 @@ BuildRequires:	intltool
 BuildRequires:	pkgconfig(dbus-1)
 BuildRequires:	pkgconfig(libjpeg)
 BuildRequires:	pkgconfig(libtiff-4)
+BuildRequires:       pkgconfig(systemd)
 BuildRequires:	systemd
 BuildRequires:       pkgconfig(libnm)
 %if 0%{?with_enca}
