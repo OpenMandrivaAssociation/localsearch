@@ -28,6 +28,8 @@ Source0:	https://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version
 
 BuildRequires:       asciidoc
 BuildRequires:       xsltproc
+BuildRequires:       docbook2x
+BuildRequires:       docbook-xsl
 BuildRequires:	meson
 BuildRequires:	giflib-devel
 BuildRequires:	intltool
