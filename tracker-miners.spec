@@ -50,6 +50,9 @@ BuildRequires:	pkgconfig(gstreamer-pbutils-1.0)
 BuildRequires:	pkgconfig(gstreamer-tag-1.0)
 BuildRequires:	pkgconfig(icu-i18n)
 BuildRequires:	pkgconfig(icu-uc)
+BuildRequires:       pkgconfig(libavcodec)
+BuildRequires:       pkgconfig(libavformat)
+BuildRequires:       pkgconfig(libavutil)
 %if 0%{?with_libcue}
 BuildRequires:	pkgconfig(libcue)
 %endif
