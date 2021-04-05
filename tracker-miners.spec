@@ -16,7 +16,7 @@
 %global systemd_units tracker-extract.service tracker-miner-fs.service tracker-miner-rss.service tracker-writeback.service
 
 Name:		tracker-miners
-Version:	3.0.4
+Version:	3.1.1
 Release:	1
 Summary:	Tracker miners and metadata extractors
 Group:		Graphical desktop/GNOME
@@ -50,6 +50,9 @@ BuildRequires:	pkgconfig(gstreamer-pbutils-1.0)
 BuildRequires:	pkgconfig(gstreamer-tag-1.0)
 BuildRequires:	pkgconfig(icu-i18n)
 BuildRequires:	pkgconfig(icu-uc)
+BuildRequires:       pkgconfig(libavcodec)
+BuildRequires:       pkgconfig(libavformat)
+BuildRequires:       pkgconfig(libavutil)
 %if 0%{?with_libcue}
 BuildRequires:	pkgconfig(libcue)
 %endif
