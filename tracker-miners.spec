@@ -16,8 +16,8 @@
 %global systemd_units tracker-extract.service tracker-miner-fs.service tracker-miner-rss.service tracker-writeback.service
 
 Name:		tracker-miners
-Version:	3.2.1
-Release:	2
+Version:	3.3.0
+Release:	1
 Summary:	Tracker miners and metadata extractors
 Group:		Graphical desktop/GNOME
 
@@ -26,6 +26,7 @@ License:	GPLv2+ and LGPLv2+
 URL:		https://wiki.gnome.org/Projects/Tracker
 Source0:	https://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 
+BuildRequires:       a2x
 BuildRequires:       asciidoc
 BuildRequires:       xsltproc
 BuildRequires:       docbook2x
