@@ -26,6 +26,7 @@ License:	GPLv2+ and LGPLv2+
 URL:		https://wiki.gnome.org/Projects/Tracker
 Source0:	https://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 
+BuildRequires:       a2x
 BuildRequires:       asciidoc
 BuildRequires:       xsltproc
 BuildRequires:       docbook2x
