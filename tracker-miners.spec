@@ -16,8 +16,8 @@
 %global systemd_units tracker-extract.service tracker-miner-fs.service tracker-miner-rss.service tracker-writeback.service
 
 Name:		tracker-miners
-Version:	3.2.1
-Release:	2
+Version:	3.3.0
+Release:	1
 Summary:	Tracker miners and metadata extractors
 Group:		Graphical desktop/GNOME
 
