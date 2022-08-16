@@ -17,7 +17,7 @@
 
 Name:		tracker-miners
 Version:	3.3.1
-Release:	2
+Release:	3
 Summary:	Tracker miners and metadata extractors
 Group:		Graphical desktop/GNOME
 
