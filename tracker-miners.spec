@@ -9,6 +9,7 @@
 %endif
 
 %define _disable_ld_no_undefined 1
+%global optflags %(echo %{optflags} -O0
 
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 %global tracker_version 3.0.0
@@ -17,7 +18,7 @@
 
 Name:		tracker-miners
 Version:	3.3.1
-Release:	3
+Release:	4
 Summary:	Tracker miners and metadata extractors
 Group:		Graphical desktop/GNOME
 
