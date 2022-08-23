@@ -9,7 +9,7 @@
 %endif
 
 %define _disable_ld_no_undefined 1
-%global optflags %(echo %{optflags} -O0
+%global optflags %optflags -O0
 
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 %global tracker_version 3.0.0
