@@ -9,6 +9,7 @@
 %endif
 
 %define _disable_ld_no_undefined 1
+# Fix for segfault https://gitlab.gnome.org/GNOME/tracker-miners/-/issues/7
 %global optflags %optflags -O0
 
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
