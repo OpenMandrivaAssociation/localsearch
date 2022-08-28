@@ -9,8 +9,13 @@
 %endif
 
 %define _disable_ld_no_undefined 1
-# Fix for segfault https://gitlab.gnome.org/GNOME/tracker-miners/-/issues/7
-%global optflags %optflags -O0
+# Sanitizer is enabled because some people apparently see crashes
+# when not using -O0
+# https://gitlab.gnome.org/GNOME/tracker-miners/-/issues/7
+# https://forum.openmandriva.org/t/gdm-takes-a-very-long-time-to-load/4596/9
+# Can't reproduce this, but let's try to get some more information
+# if that happens again
+%global optflags %optflags -fsanitize=undefined -Wl,--allow-shlib-undefined,--unresolved-symbols=ignore-all
 
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 %global tracker_version 3.0.0
@@ -19,7 +24,7 @@
 
 Name:		tracker-miners
 Version:	3.3.1
-Release:	4
+Release:	5
 Summary:	Tracker miners and metadata extractors
 Group:		Graphical desktop/GNOME
 
@@ -27,6 +32,7 @@ Group:		Graphical desktop/GNOME
 License:	GPLv2+ and LGPLv2+
 URL:		https://wiki.gnome.org/Projects/Tracker
 Source0:	https://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
+Patch0:		https://gitlab.gnome.org/GNOME/tracker-miners/-/merge_requests/405.patch
 
 BuildRequires:       a2x
 BuildRequires:       asciidoc
