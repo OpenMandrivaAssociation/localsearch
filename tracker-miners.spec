@@ -5,7 +5,7 @@
 %else
 %global with_enca 1
 %global with_libcue 1
-%global with_rss 1
+%global with_rss 0
 %endif
 
 %define _disable_ld_no_undefined 1
@@ -23,8 +23,8 @@
 %global systemd_units tracker-extract.service tracker-miner-fs.service tracker-miner-rss.service tracker-writeback.service
 
 Name:		tracker-miners
-Version:	3.3.1
-Release:	6
+Version:	3.4.0
+Release:	1
 Summary:	Tracker miners and metadata extractors
 Group:		Graphical desktop/GNOME
 
@@ -32,7 +32,6 @@ Group:		Graphical desktop/GNOME
 License:	GPLv2+ and LGPLv2+
 URL:		https://wiki.gnome.org/Projects/Tracker
 Source0:	https://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
-Patch0:		https://gitlab.gnome.org/GNOME/tracker-miners/-/merge_requests/405.patch
 
 BuildRequires:       a2x
 BuildRequires:       asciidoc
@@ -101,7 +100,8 @@ This package contains various miners and metadata extractors for tracker.
 
 %build
 %meson -Dfunctional_tests=false \
-       -Dmp3=true
+       -Dmp3=true \
+       -Dminer_rss=false
 %meson_build
 
 %install
