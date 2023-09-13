@@ -22,16 +22,18 @@
 
 %global systemd_units tracker-extract.service tracker-miner-fs.service tracker-miner-rss.service tracker-writeback.service
 
+%define beta rc
+
 Name:		tracker-miners
-Version:	3.5.2
-Release:	1
+Version:	3.6
+Release:	%{?beta:0.%{beta}.}1
 Summary:	Tracker miners and metadata extractors
 Group:		Graphical desktop/GNOME
 
 # libtracker-extract is LGPLv2+; the miners are a mix of GPLv2+ and LGPLv2+ code
 License:	GPLv2+ and LGPLv2+
 URL:		https://wiki.gnome.org/Projects/Tracker
-Source0:	https://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
+Source0:	https://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}%{?beta:.%{beta}}.tar.xz
 
 BuildRequires:       a2x
 BuildRequires:       asciidoc
@@ -96,7 +98,7 @@ tag/metadata database and search tool.
 This package contains various miners and metadata extractors for tracker.
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n %{name}-%{version}%{?beta:.%{beta}}
 
 %build
 %meson -Dfunctional_tests=false \
