@@ -22,10 +22,10 @@
 
 %global systemd_units tracker-extract.service tracker-miner-fs.service tracker-miner-rss.service tracker-writeback.service
 
-%define beta rc
+#define beta rc
 
 Name:		tracker-miners
-Version:	3.6
+Version:	3.6.0
 Release:	%{?beta:0.%{beta}.}1
 Summary:	Tracker miners and metadata extractors
 Group:		Graphical desktop/GNOME
