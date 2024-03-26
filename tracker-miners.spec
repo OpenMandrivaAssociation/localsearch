@@ -25,7 +25,7 @@
 #define beta rc
 
 Name:		tracker-miners
-Version:	3.6.2
+Version:	3.7.0
 Release:	%{?beta:0.%{beta}.}1
 Summary:	Tracker miners and metadata extractors
 Group:		Graphical desktop/GNOME
