@@ -119,6 +119,14 @@ rm -rf %{buildroot}%{_datadir}/tracker-tests
 %files -f tracker3-miners.lang
 %license COPYING
 %doc AUTHORS NEWS README.md
+%{_bindir}/tracker3-daemon
+%{_bindir}/tracker3-extract
+%{_bindir}/tracker3-index
+%{_bindir}/tracker3-info
+%{_bindir}/tracker3-reset
+%{_bindir}/tracker3-search
+%{_bindir}/tracker3-status
+%{_bindir}/tracker3-tag
 %{_libdir}/tracker-miners-3.0/
 %{_libexecdir}/tracker*
 %{_datadir}/dbus-1/interfaces/org.freedesktop.Tracker3*
@@ -126,6 +134,7 @@ rm -rf %{buildroot}%{_datadir}/tracker-tests
 %{_datadir}/glib-2.0/schemas/*
 #{_datadir}/tracker/
 %{_datadir}/tracker3-miners/
+%{_datadir}/tracker3/commands/
 %{_mandir}/man1/tracker*.1*
 %config(noreplace) %{_sysconfdir}/xdg/autostart/tracker*.desktop
 %{_userunitdir}/tracker*.service
