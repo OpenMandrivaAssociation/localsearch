@@ -24,8 +24,8 @@
 
 #define beta rc
 
-Name:		tracker-miners
-Version:	3.7.3
+Name:		localsearch
+Version:	3.8.rc
 Release:	%{?beta:0.%{beta}.}2
 Summary:	Tracker miners and metadata extractors
 Group:		Graphical desktop/GNOME
