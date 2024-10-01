@@ -93,6 +93,8 @@ Obsoletes:	tracker < 1.99.2
 Conflicts:	tracker < 1.99.2
 Obsoletes:    tracker-miners < 3.7.90
 
+Provides:            tracker-miners
+
 %description
 Tracker is a powerful desktop-neutral first class object database,
 tag/metadata database and search tool.
