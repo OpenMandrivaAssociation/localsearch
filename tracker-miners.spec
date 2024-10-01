@@ -81,7 +81,7 @@ BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(poppler-glib)
 BuildRequires:	pkgconfig(taglib_c)
 BuildRequires:	pkgconfig(totem-plparser)
-BuildRequires:	pkgconfig(tracker-sparql-3.0) >= %{tracker_version}
+BuildRequires:	pkgconfig(tinysparql-3.0)
 BuildRequires:	pkgconfig(upower-glib)
 BuildRequires:	pkgconfig(vorbisfile)
 BuildRequires:	pkgconfig(zlib)
@@ -113,31 +113,24 @@ This package contains various miners and metadata extractors for tracker.
 
 rm -rf %{buildroot}%{_datadir}/tracker-tests
 
-#find_lang tracker3-miners
+%find_lang localsearch3
 
 %post
 %systemd_user_post %{systemd_units}
 
-%files 
-#-f tracker3-miners.lang
+%files -f localsearch3.lang
 %license COPYING
 %doc AUTHORS NEWS README.md
-#{_bindir}/tracker3-daemon
-#{_bindir}/tracker3-extract
-#{_bindir}/tracker3-index
-#{_bindir}/tracker3-info
-#{_bindir}/tracker3-reset
-#{_bindir}/tracker3-search
-#{_bindir}/tracker3-status
-#{_bindir}/tracker3-tag
-#{_libdir}/tracker-miners-3.0/
-#{_libexecdir}/tracker*
-#{_datadir}/dbus-1/interfaces/org.freedesktop.Tracker3*
-#{_datadir}/dbus-1/services/org.freedesktop.Tracker*
-#{_datadir}/glib-2.0/schemas/*
-#{_datadir}/tracker/
+%{_bindir}/localsearch
+%{_libdir}/localsearch-3.0/
+%{_libexecdir}/localsearch*
+%{_datadir}/dbus-1/interfaces/org.freedesktop.Tracker3*
+%{_datadir}/dbus-1/services/org.freedesktop.LocalSearch*
+%{_datadir}/dbus-1/services/org.freedesktop.Tracker*
+%{_datadir}/glib-2.0/schemas/org.freedesktop.Tracker*
+%{_datadir}/localsearch3/
 #{_datadir}/tracker3-miners/
 #{_datadir}/tracker3/commands/
-#{_mandir}/man1/tracker*.1*
-#config(noreplace) %{_sysconfdir}/xdg/autostart/tracker*.desktop
-#{_userunitdir}/tracker*.service
+%{_mandir}/man1/localsearch*
+%config(noreplace) %{_sysconfdir}/xdg/autostart/localsearch-3.desktop
+%{_userunitdir}/localsearch*
