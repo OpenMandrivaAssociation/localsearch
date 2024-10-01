@@ -54,6 +54,7 @@ BuildRequires:	pkgconfig(enca)
 %endif
 BuildRequires:	pkgconfig(exempi-2.0)
 BuildRequires:	pkgconfig(flac)
+BuildRequires:       pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gexiv2)
 BuildRequires:	pkgconfig(gstreamer-1.0)
 BuildRequires:	pkgconfig(gstreamer-pbutils-1.0)
@@ -85,11 +86,12 @@ BuildRequires:	pkgconfig(upower-glib)
 BuildRequires:	pkgconfig(vorbisfile)
 BuildRequires:	pkgconfig(zlib)
 
-Requires:	tracker%{?_isa} >= %{tracker_version}
+Requires:		tinysparql%{?_isa} >= %{tracker_version}
 
 # tracker-miners was split out from tracker in 1.99.2
 Obsoletes:	tracker < 1.99.2
 Conflicts:	tracker < 1.99.2
+Obsoletes:    tracker-miners < 3.7.90
 
 %description
 Tracker is a powerful desktop-neutral first class object database,
@@ -111,12 +113,13 @@ This package contains various miners and metadata extractors for tracker.
 
 rm -rf %{buildroot}%{_datadir}/tracker-tests
 
-%find_lang tracker3-miners
+#find_lang tracker3-miners
 
 %post
 %systemd_user_post %{systemd_units}
 
-%files -f tracker3-miners.lang
+%files 
+#-f tracker3-miners.lang
 %license COPYING
 %doc AUTHORS NEWS README.md
 #{_bindir}/tracker3-daemon
