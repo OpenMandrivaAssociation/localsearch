@@ -25,9 +25,9 @@
 #define beta rc
 
 Name:		localsearch
-Version:	3.8.rc
-Release:	%{?beta:0.%{beta}.}2
-Summary:	Tracker miners and metadata extractors
+Version:	3.8.0
+Release:	%{?beta:0.%{beta}.}1
+Summary:	Localsearch and metadata extractors
 Group:		Graphical desktop/GNOME
 
 # libtracker-extract is LGPLv2+; the miners are a mix of GPLv2+ and LGPLv2+ code
@@ -96,7 +96,7 @@ Obsoletes:    tracker-miners < 3.7.90
 Provides:            tracker-miners
 
 %description
-Tracker is a powerful desktop-neutral first class object database,
+localsearch is a powerful desktop-neutral first class object database,
 tag/metadata database and search tool.
 
 This package contains various miners and metadata extractors for tracker.
