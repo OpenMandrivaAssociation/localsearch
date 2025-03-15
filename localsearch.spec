@@ -106,8 +106,7 @@ This package contains various miners and metadata extractors for tracker.
 
 %build
 %meson -Dfunctional_tests=false \
-       -Dmp3=true \
-       -Dminer_rss=false
+       -Dmp3=true
 %meson_build
 
 %install
