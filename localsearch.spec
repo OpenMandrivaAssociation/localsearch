@@ -25,7 +25,7 @@
 #define beta rc
 
 Name:		localsearch
-Version:	3.8.2
+Version:	3.9.rc
 Release:	%{?beta:0.%{beta}.}1
 Summary:	Localsearch and metadata extractors
 Group:		Graphical desktop/GNOME
@@ -106,8 +106,7 @@ This package contains various miners and metadata extractors for tracker.
 
 %build
 %meson -Dfunctional_tests=false \
-       -Dmp3=true \
-       -Dminer_rss=false
+       -Dmp3=true
 %meson_build
 
 %install
