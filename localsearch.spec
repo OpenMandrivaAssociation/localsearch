@@ -26,7 +26,7 @@
 
 Name:		localsearch
 Version:	3.9.0
-Release:	%{?beta:0.%{beta}.}1
+Release:	%{?beta:0.%{beta}.}2
 Summary:	Localsearch and metadata extractors
 Group:		Graphical desktop/GNOME
 
