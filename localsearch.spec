@@ -130,8 +130,7 @@ rm -rf %{buildroot}%{_datadir}/tracker-tests
 %{_datadir}/dbus-1/services/org.freedesktop.Tracker*
 %{_datadir}/glib-2.0/schemas/org.freedesktop.Tracker*
 %{_datadir}/localsearch3/
-#{_datadir}/tracker3-miners/
-#{_datadir}/tracker3/commands/
+%{_datadir}/bash-completion/completions/localsearch
 %{_mandir}/man1/localsearch*
 %config(noreplace) %{_sysconfdir}/xdg/autostart/localsearch-3.desktop
 %{_userunitdir}/localsearch*
