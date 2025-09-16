@@ -25,7 +25,7 @@
 #define beta rc
 
 Name:		localsearch
-Version:	3.10.rc
+Version:	3.10.0
 Release:	%{?beta:0.%{beta}.}1
 Summary:	Localsearch and metadata extractors
 Group:		Graphical desktop/GNOME
@@ -35,58 +35,58 @@ License:	GPLv2+ and LGPLv2+
 URL:		https://wiki.gnome.org/Projects/Tracker
 Source0:	https://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}%{?beta:.%{beta}}.tar.xz
 
-BuildRequires:       a2x
-BuildRequires:       asciidoc
-BuildRequires:       xsltproc
-BuildRequires:       docbook2x
-BuildRequires:       docbook-xsl
-BuildRequires:	meson
-BuildRequires:	giflib-devel
-BuildRequires:	intltool
-BuildRequires:	pkgconfig(dbus-1)
-BuildRequires:	pkgconfig(libjpeg)
-BuildRequires:	pkgconfig(libtiff-4)
-BuildRequires:       pkgconfig(systemd)
-BuildRequires:	systemd
-BuildRequires:       pkgconfig(libnm)
+BuildRequires: a2x
+BuildRequires: asciidoc
+BuildRequires: xsltproc
+BuildRequires: docbook2x
+BuildRequires: docbook-xsl
+BuildRequires: meson
+BuildRequires: giflib-devel
+BuildRequires: intltool
+BuildRequires: pkgconfig(dbus-1)
+BuildRequires: pkgconfig(libjpeg)
+BuildRequires: pkgconfig(libtiff-4)
+BuildRequires: pkgconfig(systemd)
+BuildRequires: systemd
+BuildRequires: pkgconfig(libnm)
 %if 0%{?with_enca}
-BuildRequires:	pkgconfig(enca)
+BuildRequires: pkgconfig(enca)
 %endif
-BuildRequires:	pkgconfig(exempi-2.0)
-BuildRequires:	pkgconfig(flac)
-BuildRequires:       pkgconfig(gobject-introspection-1.0)
-BuildRequires:	pkgconfig(gexiv2)
-BuildRequires:	pkgconfig(gstreamer-1.0)
-BuildRequires:	pkgconfig(gstreamer-pbutils-1.0)
-BuildRequires:	pkgconfig(gstreamer-tag-1.0)
-BuildRequires:	pkgconfig(icu-i18n)
-BuildRequires:	pkgconfig(icu-uc)
-BuildRequires:       pkgconfig(libavcodec)
-BuildRequires:       pkgconfig(libavformat)
-BuildRequires:       pkgconfig(libavutil)
+BuildRequires: pkgconfig(exempi-2.0)
+BuildRequires: pkgconfig(flac)
+BuildRequires: pkgconfig(gobject-introspection-1.0)
+BuildRequires: pkgconfig(gexiv2)
+BuildRequires: pkgconfig(gstreamer-1.0)
+BuildRequires: pkgconfig(gstreamer-pbutils-1.0)
+BuildRequires: pkgconfig(gstreamer-tag-1.0)
+BuildRequires: pkgconfig(icu-i18n)
+BuildRequires: pkgconfig(icu-uc)
+BuildRequires: pkgconfig(libavcodec)
+BuildRequires: pkgconfig(libavformat)
+BuildRequires: pkgconfig(libavutil)
 %if 0%{?with_libcue}
-BuildRequires:	pkgconfig(libcue)
+BuildRequires: pkgconfig(libcue)
 %endif
-BuildRequires:	pkgconfig(libexif)
+BuildRequires: pkgconfig(libexif)
 %if 0%{?with_rss}
-BuildRequires:	pkgconfig(libgrss)
+BuildRequires: pkgconfig(libgrss)
 %endif
-BuildRequires:	pkgconfig(libgsf-1)
-BuildRequires:	pkgconfig(libgxps)
-BuildRequires:	pkgconfig(libiptcdata)
-BuildRequires:	pkgconfig(libosinfo-1.0)
-BuildRequires:	pkgconfig(libpng)
-BuildRequires:	pkgconfig(libseccomp)
-BuildRequires:	pkgconfig(libxml-2.0)
-BuildRequires:	pkgconfig(poppler-glib)
-BuildRequires:	pkgconfig(taglib_c)
-BuildRequires:	pkgconfig(totem-plparser)
-BuildRequires:	pkgconfig(tinysparql-3.0)
-BuildRequires:	pkgconfig(upower-glib)
-BuildRequires:	pkgconfig(vorbisfile)
-BuildRequires:	pkgconfig(zlib)
+BuildRequires: pkgconfig(libgsf-1)
+BuildRequires: pkgconfig(libgxps)
+BuildRequires: pkgconfig(libiptcdata)
+BuildRequires: pkgconfig(libosinfo-1.0)
+BuildRequires: pkgconfig(libpng)
+BuildRequires: pkgconfig(libseccomp)
+BuildRequires: pkgconfig(libxml-2.0)
+BuildRequires: pkgconfig(poppler-glib)
+BuildRequires: pkgconfig(taglib_c)
+BuildRequires: pkgconfig(totem-plparser)
+BuildRequires: pkgconfig(tinysparql-3.0)
+BuildRequires: pkgconfig(upower-glib)
+BuildRequires: pkgconfig(vorbisfile)
+BuildRequires: pkgconfig(zlib)
 
-Requires:		tinysparql%{?_isa} >= %{tracker_version}
+Requires: tinysparql%{?_isa} >= %{tracker_version}
 
 # tracker-miners was split out from tracker in 1.99.2
 Obsoletes:	tracker < 1.99.2
