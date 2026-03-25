@@ -47,6 +47,7 @@ BuildRequires: pkgconfig(dbus-1)
 BuildRequires: pkgconfig(libjpeg)
 BuildRequires: pkgconfig(libtiff-4)
 BuildRequires: pkgconfig(libzip)
+BuildRequires: pkgconfig(libwebpdemux)
 BuildRequires: pkgconfig(systemd)
 BuildRequires: systemd
 BuildRequires: pkgconfig(libnm)
