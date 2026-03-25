@@ -25,7 +25,7 @@
 #define beta rc
 
 Name:		localsearch
-Version:	3.10.2
+Version:	3.11.0
 Release:	%{?beta:0.%{beta}.}1
 Summary:	Localsearch and metadata extractors
 Group:		Graphical desktop/GNOME
@@ -67,13 +67,13 @@ BuildRequires: pkgconfig(libavutil)
 %if 0%{?with_libcue}
 BuildRequires: pkgconfig(libcue)
 %endif
-BuildRequires: pkgconfig(libexif)
+#BuildRequires: pkgconfig(libexif)
 %if 0%{?with_rss}
 BuildRequires: pkgconfig(libgrss)
 %endif
 BuildRequires: pkgconfig(libgsf-1)
 BuildRequires: pkgconfig(libgxps)
-BuildRequires: pkgconfig(libiptcdata)
+#BuildRequires: pkgconfig(libiptcdata)
 BuildRequires: pkgconfig(libosinfo-1.0)
 BuildRequires: pkgconfig(libpng)
 BuildRequires: pkgconfig(libseccomp)
