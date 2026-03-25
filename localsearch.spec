@@ -26,7 +26,7 @@
 
 Name:		localsearch
 Version:	3.11.0
-Release:	%{?beta:0.%{beta}.}1
+Release:	%{?beta:0.%{beta}.}2
 Summary:	Localsearch and metadata extractors
 Group:		Graphical desktop/GNOME
 
@@ -88,6 +88,7 @@ BuildRequires: pkgconfig(tinysparql-3.0)
 BuildRequires: pkgconfig(upower-glib)
 BuildRequires: pkgconfig(vorbisfile)
 BuildRequires: pkgconfig(zlib)
+BuildRequires: python%{pyver}dist(python-dbusmock)
 
 Requires: tinysparql%{?_isa} >= %{tracker_version}
 
