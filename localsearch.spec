@@ -44,6 +44,7 @@ BuildRequires: meson
 BuildRequires: giflib-devel
 BuildRequires: intltool
 BuildRequires: pkgconfig(dbus-1)
+BuildRequires: pkgconfig(gupnp-dlna-2.0)
 BuildRequires: pkgconfig(libjpeg)
 BuildRequires: pkgconfig(libtiff-4)
 BuildRequires: pkgconfig(libzip)
