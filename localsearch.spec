@@ -25,8 +25,8 @@
 #define beta rc
 
 Name:		localsearch
-Version:	3.11.0
-Release:	%{?beta:0.%{beta}.}3
+Version:	3.11.1
+Release:	%{?beta:0.%{beta}.}1
 Summary:	Localsearch and metadata extractors
 Group:		Graphical desktop/GNOME
 
