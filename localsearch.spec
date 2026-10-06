@@ -25,7 +25,7 @@
 #define beta rc
 
 Name:		localsearch
-Version:	3.11.2
+Version:	3.12.0
 Release:	%{?beta:0.%{beta}.}1
 Summary:	Localsearch and metadata extractors
 Group:		Graphical desktop/GNOME
@@ -46,6 +46,7 @@ BuildRequires: intltool
 BuildRequires: pkgconfig(dbus-1)
 BuildRequires: pkgconfig(gupnp-dlna-2.0)
 BuildRequires: pkgconfig(libjpeg)
+BuildRequires: pkgconfig(libmediainfo)
 BuildRequires: pkgconfig(libtiff-4)
 BuildRequires: pkgconfig(libzip)
 BuildRequires: pkgconfig(libwebpdemux)
